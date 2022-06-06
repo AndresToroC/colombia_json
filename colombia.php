@@ -17,9 +17,6 @@ $mysqli->query($sqlCountries);
 $country_id = mysqli_insert_id($mysqli);
 
 foreach ($objects as $key => $object) {
-    // if ($object->departamento == 'Bolívar') {
-    //     var_dump($object->departamento);exit;
-    // }
     // Ingresa el departamento
     $sqlDepartment = "INSERT INTO departments (name, country_id) VALUES ('$object->departamento', $country_id)";
 
